@@ -1,4 +1,7 @@
+"use client";
+
 import { Phone, Mail, Clock, MapPin } from 'lucide-react';
+import Script from 'next/script';
 
 export default function ContactSection() {
   return (
@@ -88,86 +91,31 @@ export default function ContactSection() {
           <div className="bg-white p-8 rounded-lg shadow-md">
             <h3 className="text-2xl font-bold mb-6">Request a Free Estimate</h3>
             
-            {/* This would be replaced with the actual GoHighLevel embed code */}
+            {/* GoHighLevel embed form */}
             <div className="ghl-embed-form-container">
-              {/* GoHighLevel form embed would go here */}
-              {/* For now, we'll create a placeholder form */}
-              <form className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block mb-1 font-medium">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="John Smith"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block mb-1 font-medium">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block mb-1 font-medium">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="(216) 965-3804"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="service" className="block mb-1 font-medium">
-                    Service Needed
-                  </label>
-                  <select
-                    id="service"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="interior">Interior Painting</option>
-                    <option value="exterior">Exterior Painting</option>
-                    <option value="commercial">Commercial Painting</option>
-                    <option value="cabinets">Cabinet Refinishing</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block mb-1 font-medium">
-                    Project Details
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="Tell us about your project..."
-                  />
-                </div>
-                
-                <button
-                  type="submit"
-                  className="w-full btn"
-                >
-                  Submit Request
-                </button>
-                
-                <p className="text-sm text-gray-500 text-center">
-                  * We'll get back to you within 24 hours
-                </p>
-              </form>
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/o5vw4364dsRhCO7TuHJY"
+                style={{
+                  width: "100%",
+                  height: "708px",
+                  border: "none",
+                  borderRadius: "3px"
+                }}
+                id="inline-o5vw4364dsRhCO7TuHJY" 
+                data-layout={"{'id':'INLINE'}"}
+                data-trigger-type="showOnScrolling"
+                data-trigger-value="30"
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Contact Form"
+                data-height="708"
+                data-layout-iframe-id="inline-o5vw4364dsRhCO7TuHJY"
+                data-form-id="o5vw4364dsRhCO7TuHJY"
+                title="Contact Form"
+              />
+              <Script src="https://link.msgsndr.com/js/form_embed.js" />
             </div>
           </div>
         </div>
